@@ -1,0 +1,27 @@
+<?php include "header.phtml"; ?>
+<h1>Have a look around the food store, all Fresh produce are locally farmed</h1>
+<p>We hope you enjoy your visit to the food store!</p>
+<form action="products.php" method="post">
+	<input type="submit" name="selectSubmit" value="Add to basket" />
+	
+	<table>
+	<tr>
+		<th>Food Type</th>
+		<th>Category</th>
+		<th>Description</th>
+		<th>Price</th>
+		<th>Select</th>
+	</tr>
+	<?php foreach ($this->food as $food): ?>
+	    <tr>
+	        <td><?=$food["foodtype"]?></td>
+	        <td><?=$food["category"]?></td>
+	        <td><?=$food["description"]?></td>
+	        <td><?=$food["price"]?></td>
+	        <td><input type="checkbox" name="select[]" value="<?=$food["ref"]?>" />
+	    </tr>
+	<?php endforeach; ?>
+	</table>
+	<input type="submit" name="selectSubmit" value="Add to basket" />
+</form>
+<?php include "footer.phtml"; ?>

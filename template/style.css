@@ -1,0 +1,151 @@
+/*ffe2b3
+56493f*/
+
+body {
+	background-color: #515151;
+	font-family: Arial, 
+		Helvetica, sans-serif;
+	margin:0;
+	padding: 0;
+	color:#222;
+}
+
+#disclaimer {
+	margin:10px auto;
+	padding: 2px 10px;
+	width:95%;
+	background-color: #ffbebe;
+	border:1px solid #f00;
+	text-align: center;
+	color: #222;
+	font-size: 0.6em;
+}
+
+#page {
+	width:90%;
+	background-color: #356499;
+	margin:20px auto;
+	padding: 0;
+
+	-moz-box-shadow: 0px 0px 10px #111;
+	-webkit-box-shadow: 0px 0px 10px #111;
+	box-shadow: 0px 0px 10px #111;
+
+}
+
+#page #bodyarea table,th, td{
+	border:1px solid #333;
+	border-collapse:collapse;
+	padding:4px;
+	margin:0;
+}
+
+#page #header {
+	position:relative;
+	background-color: #1f3642;
+	background-image: 
+		url("../img/header_grad.png");
+	background-repeat: repeat-x;
+	vertical-align: middle;
+	height: 80px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0;
+}
+
+#page #header h1{
+	position:absolute;
+	top:50%;
+	color: #eee;
+	width: 100%;
+	text-align: center;
+	height:36px;
+	font-size: 2em;
+	margin-top: -18px;
+	font-weight: 100;
+}
+
+#page #nav {
+	color: #888;
+	text-decoration: none;
+	padding: 6px 20px;
+	background-color: #CCCCCC;
+	border-bottom: 1px solid #999;
+
+}
+
+#page #nav ul {
+	list-style: none;
+	margin:0;
+	padding: 0;
+}
+
+#page #nav li {
+	font-size: 1.0em;
+	display:inline-block;
+	padding-left:8px;
+	padding-right: 8px;
+}
+
+#page #nav li a {
+	color:#666;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+#page #nav li a:hover {
+	color:#444;
+}
+
+#page #bodyarea {
+	margin:10px;
+}
+
+#page #bodyarea h1{
+	text-transform: uppercase;
+	font-size: 1.6em;
+	font-weight: 300;
+}
+
+#page #bodyarea h2{
+	text-transform: uppercase;
+	font-size: 1.4em;
+	font-weight: 300;
+}
+
+#page #bodyarea .totalcost{
+	text-align: right;
+	font-weight: bold;
+}
+
+#page #footer{
+	padding:10px;
+	text-align: center;
+}
+
+/*
+#page #login {
+	padding:0;
+	margin:0;
+	clear:both;
+	position:relative;
+	float:right;
+}
+#page #login form {
+	padding:0;
+	margin:0;
+}*/
+
+div#loginForm * {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+div#loginForm {
+    float:right;
+    padding-right: 10px;
+}
+div#loginForm ul li {
+    display: inline;
+}

@@ -1,0 +1,31 @@
+<?php include "header.phtml"; ?>
+<h1>Enter your (fake) payment details</h1>
+<p>To checkout, your details need to be entered below</p>
+<p>if you wish to change your order please navigate back to the Shop page.</p>
+<script type="text/javascript">
+function validateForm(){
+
+   if (document.validate.emailAddress.value == "")
+   {
+      alert("Please enter the email address");
+      document.validate.emailAddress.focus();
+      return false;
+   }
+   if (document.validate.cardNumber.value == "")
+   {
+      alert("Please enter the card number");
+      document.validate.cardNumber.focus();
+      return false;
+   }
+   return true;
+}
+</script>
+<form method="post" name="validate" onsubmit="return validateForm();" action="checkout.phtml">
+	<label>Email Address:</label><br />
+	<input type="text" size="30" name="emailAddress" /><br />
+	<label>Card Number (16 digits): </label><br />
+	<input type="text" size="30" name="cardNumber" /><br />
+	<input type="submit" name="checkoutSubmit" value="Confirm (fake) purchase" />
+</form>
+
+<?php include "footer.phtml"; ?>

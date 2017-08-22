@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Curtis' CS25010 Food Shop</title>
+	<meta http-equiv="content-type" 
+		content="text/html;charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="template/style.css" />
+</head>
+<body>
+	<div id="disclaimer">
+		<p>THIS IS NOT A REAL WEB SHOP; IT IS CREATED AS PART OF MY UNIVERSITY COURSEWORK. PLEASE DO NOT ATTEMPT TO BUY ANYTHING FROM THIS SITE, NOR ENTER YOUR REAL CARD DETAILS.</p>
+	</div>
+
+	<div id="page">
+		<div id="header">
+			<div id="title">
+				<h1>Curtis' Food Store</h1>
+			</div>
+		</div>
+		<div id="nav">
+			<ul>
+				<li><a href="index.php"> Home </a> </li>
+				<li><a href="about.php"> About </a> </li>
+				<li><a href="products.php"> Shop </a> </li>
+				<li><a href="basket.php"> Basket </a> </li>
+			</ul> 
+		</div>
+		<div id="bodyarea">
+			<div id="loginForm">
+			<script type="text/javascript">
+function validateForm()
+{
+   if (document.test.name.value == "")
+   {
+      alert("Please enter the name");
+      document.test.name.focus();
+      return false;
+   }
+   return true;
+}
+</script>
+					<?php if ($this->logged_in == False) : ?>
+						<form method="post" name="test" onsubmit="return validateForm();" action="login.php">
+						<ul>
+					        <li><input name="name" size="13" /></li>
+					        <li><input type="submit" value="login" /></li>
+					    </ul>
+					    </form>
+					<?php else : ?>
+					    <ul>
+						<li>Welcome <?=$this->user_name ?></li>
+						<li><a href="logout.php">logout</a></li>
+					    </ul>
+					<?php endif; ?>
+			</div>
